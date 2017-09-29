@@ -1,0 +1,20 @@
+//fonts del proyecto
+$sourceSanspro: 'SourceSansPro',
+san-serif;
+$openSans: 'Josefin Slab',
+'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+$fonts:( OpenSans: $sourceSanspro);
+@function font($font) {
+    @if map-has-key($font, $fonts) {
+        $font: map-get($fonts, $font);
+    }
+    @else {
+        @if type-of($font) !=font {
+            @error "Font name: `#{$font}` not found"
+        }
+    }
+    @return $font;
+}

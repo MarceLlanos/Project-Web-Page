@@ -1,0 +1,17 @@
+.side-header {
+    background-color: #250345;
+}
+
+.site-header_top {
+    position: inherit;
+    padding: 24px 0 12px;
+    text-align: center;
+    @include mq($from: tablet) {}
+    @include mq($from: desktop) {
+        height: 123px;
+    }
+}
+
+.side-header_menu {
+    text-decoration-line: none;
+}

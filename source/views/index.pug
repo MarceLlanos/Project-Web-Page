@@ -1,0 +1,16 @@
+extends partials/docwrapper
+block langPage
+	meta(name= "language", content = "es")
+block titlePage
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		include partials/header
+		
+		main.site-main
+			.container
+				h2 Bienvenidos al 
+				h2 SISTEMA WEB DE TELEVISIÓN DIGITAL
+				a.button.button_light(href="editor.html") Iniciar

@@ -1,0 +1,33 @@
+//Colors Map
+$colors:( black1: #000000, black: #333333, gray: #777777, white: #eeeeee, blue: #23527c, blue1: #337ab7, );
+//obtiene color del mapa de colores
+@function get-color($color) {
+    @if map-has-key($colors, $color) {
+        $color: map-get($colors, $color)
+    }
+    @else {
+        @if type-of($color) !=$color {
+            @error "Color name:`#{$color}` not found."
+        }
+    }
+    @return $color;
+}
+
+@each $colorName,
+$color in $colors {
+    .text-#{$colorName} {
+        color: $color !important;
+    }
+    .bg-#{$colorName} {
+        background-color: $color !important;
+        &_expand-left {
+            @include expand($color, left)
+        }
+        &_expand-right {
+            @include expand($color, right)
+        }
+    }
+    .border-#{$colorName} {
+        border-color: $color
+    }
+}
