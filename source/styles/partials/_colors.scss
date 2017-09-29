@@ -1,5 +1,11 @@
 //Colors Map
-$colors:( black1: #000000, black: #333333, gray: #777777, white: #eeeeee, blue: #23527c, blue1: #337ab7, );
+$colors:( 
+    black1: #000000, 
+    black: #333333, 
+    gray: #777777,
+    white: #eeeeee, 
+    blue: #23527c, 
+    blue1: #337ab7, );
 //obtiene color del mapa de colores
 @function get-color($color) {
     @if map-has-key($colors, $color) {
