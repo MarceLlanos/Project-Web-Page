@@ -1,0 +1,169 @@
+.container{
+	&--height-full{
+		height: 100%;
+	}
+}
+
+.paragraph{
+	margin: 0 0 10px;
+}
+
+.box{
+	&-left{
+		float: left;
+	}
+	&-right{
+		float: right;
+	}
+}
+@for $i from 1 through 50{
+	@if($i%5 == 0){
+		$m: pixels($i);
+		.mb-#{$i}{
+			@include margin($i, bottom);
+		}
+	}
+}
+
+.no-padding{
+	padding: 0 !important;
+	padding-bottom: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.no-padding-bottom{
+	padding-bottom: 0 !important;
+}
+
+.no-padding-top{
+	padding-top: 0 !important;
+}
+.no-padding-left{
+	padding-left: 0 !important;
+}
+.no-padding-right{
+	padding-right: 0 !important;
+}
+
+.no-margin{
+	margin: 0 !important;
+	&-left{
+		margin-left: 0 !important;
+	}
+	&-right{
+		margin-right: 0 !important;
+	}
+	&-top{
+		margin-top: 0 !important;
+	}
+	&-bottom{
+		margin-bottom: 0 !important;
+	}
+}
+
+.pull{
+	&-sm-right{
+		@include mq($from: tablet){
+			float: right;
+		}
+	}
+	&-md-right{
+		@include mq($from: desktop){
+			float: right;
+		}
+	}
+	&-lg-right{
+		@include mq($from: wide){
+			float: right;
+		}
+	}
+}
+
+@each $bpName, $bp in $bootstrapBreakpoints {
+	.overfloat-#{$bpName}{
+		@if ($bpName == xs){
+			@include mq($until: 768px){
+				margin-left: -15px !important;
+				margin-right: -15px !important;
+			}
+		}
+		@else{
+			@include mq($from: $bp){
+				margin-left: -15px !important;
+				margin-right: -15px !important;
+			}
+		}
+	}
+}
+
+.elem-to-bg{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	@for  $i from 1 to $grid-columns{
+		&--#{$i}{
+			background-size: ( $i*100%/$grid-columns);
+			background-position-x: left;
+		}
+	}
+	&--left{
+		background-position-x: left;
+	}
+	&--right{
+		background-position-x: right;
+	}
+}
+
+.img-to-bg{
+	display: none !important;
+}
+
+.bg-img-expand{
+	@include mq($until: tablet){
+		min-height: 300px;
+	}
+	&_bg{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		position: absolute;
+		height: 100%;
+		z-index: -1;
+		&--left{
+			right: 0;
+		} 
+		&--right{
+			left: 0;
+		}
+	}
+}
+
+.img-reponsive{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

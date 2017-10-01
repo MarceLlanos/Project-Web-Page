@@ -1,0 +1,30 @@
+@mixin svgIcon($name, $width, $height){
+	background-image: url($iconpath + $name + ".svg");
+	width: $width + px;
+	height: $height + px;
+}
+
+[class*="icon-"]{
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.icon{
+	&--left{
+		margin-right: .6em;
+	}
+	&--right{
+		margin-left: .6em;
+	}
+}
+$icons:();
+@each $iconName, $icon in $icons {
+	.icon{
+		&-#{$iconName}{
+			@include svgIcon($iconName, map-get($icon, width), map-get($icon, height));
+		}
+	}
+}

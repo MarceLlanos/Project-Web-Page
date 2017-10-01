@@ -1,0 +1,119 @@
+.dark_typography{
+	color: get-color(black);
+
+	a{
+		color: get-color(black);
+	}
+
+	a:hover{
+		color: get-color(black);
+	}
+
+	h1,h2,h3,h4,h5,h6{
+		color: get-color(black);
+	}
+}
+
+.light_typography{
+	color: get-color(white);
+
+	a{
+		color: get-color(white);
+	}
+	a:hover{
+		color: get-color(white);
+	}
+
+	h1, h2, h3, h4, h5, h6{
+		color: get-color(white);
+	}
+}
+
+p, h1, h2, h3, h4, h5, h6{
+	color: inherit;
+	margin: 0 0 ms(0);
+}
+
+p{
+	font-size: ms(0);
+	line-height: ms(3);
+}
+
+h1, title-s1 {font-size: ms(5);}
+h2, title-s2 {font-size: ms(4);}
+h3, title-s3 {font-size: ms(3);}
+h4, title-s4 {font-size: ms(2);}
+h5, title-s5 {font-size: ms(1);}
+h6, title-s6 {font-size: ms(0);}
+
+ul, li { font-size: ms(0);}
+
+.text{
+	&-center {text-align: center !important; }
+	&-left {text-align: left !important;}
+	&-right {text-align: right !important;}
+	@each $bpName, $bp in $bootstrapBreakpoints {
+		@if ($bpName == xs){
+			&-#{$bpName}-center{
+				@include mq($until: 768px){
+					text-align: center;
+				}
+			}
+
+			&-#{$bpName}-left{
+				@include mq($until: 768px){
+					text-align: left;
+				}
+			}
+			&-#{$bpName}-right{
+				@include mq($until: 768px){
+					text-align: right;
+				}
+			}
+		}
+		@else{
+			&-#{$bpName}-center{
+				@include mq($from: $bp){
+					text-align: center;
+				}
+			}
+			&-#{$bpName}-left{
+				@include mq($from: $bp){
+					text-align: left;
+				}
+			}
+			&-#{$bpName}-right{
+				@include mq($from: $bp){
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+.no-margin-bottom{
+	margin-bottom: 0!important;
+}
+
+.italic		{font-style: italic !important;}
+.xlight		{font-weight: 200 !important;}
+.light		{font-weight: 300 !important;}
+.regular	{font-weight: 400 !important;}
+.semibold	{font-weight: 500 !important;}
+.bold		{font-weight: 600 !important;}
+.xbold		{font-weight: 700 !important;}
+.defultcase {text-transform: none !important;}
+.uppercase  {text-transform: uppercase !important;}
+.lowercase  {text-transform: lowercase !important;}
+.underline  {text-decoration: underline !important;}
+
+
+
+
+
+
+
+
+
+
+
+
