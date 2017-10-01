@@ -142,10 +142,53 @@
 }
 
 .img-reponsive{
-	
+	@include img-reponsive();
 }
 
+.img-adaptative{
+	@include img-reponsive();
+}
 
+.img-center{
+	@include center-block();
+}
+
+.table{
+	&_block{
+		display: table;
+		height: 100%;
+		width: 100%;
+		& &_content{
+			display: table-cell;
+		}
+	}
+
+	@each $bpName, $bp in $bootstrapBreakpoints{
+		&-#{$bpName}-_block{
+			@if($bpName == xs){
+				@include mq($until: tablet){
+					display: table;
+					height: 100%;
+					width: 100%;
+					.table-block_content{
+						display: table-cell;
+					}
+				}
+			}
+			@else {
+				@include mq($from: $bp){
+					display: table;
+					height: 100%;
+					width: 100%;
+					.table-block_content{
+						display: table-cell;
+					}
+				}
+			}
+		}
+	}
+}
+ 
 
 
 

@@ -142,3 +142,15 @@
 	filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
 	opacity: $opacity;
 }
+
+@mixin img-responsive(){
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+@mixin img-adaptive(){
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
