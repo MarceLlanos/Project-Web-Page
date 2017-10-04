@@ -1,101 +1,163 @@
 .navigation {
-    background-color: get-color(gray);
-    position: fixed;
-    text-align: center;
-    margin: 30px 0;
-    @include mq($from: desktop) {}
-    &_header {
-        display: inherit;
-        margin: 0;
-        padding: 10px 0 10px;
-        text-align: center;
-        color: get-color(gray);
-        h2 {
-            font-size: ms(4);
-            font-weight: 600;
-        }
-        p {
-            font-size: ms(2);
-            font-weight: 400;
-        }
-    }
-    &_content {
-        @include mq($from: tablet) {
-            padding-left: (163px +15);
-        }
-        @include mq($until: desktop) {
-            @include center(v);
-            width: 100%;
-        }
-    }
-    &_list {
-        border: none;
-        background: none;
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        display: block;
-        margin: 0;
-        z-index: 40;
-        transition: all .2s;
-        @include mq($from: desktop) {
-            display: none;
-        }
-        span {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            margin-top: -2px;
-            background-color: get-color(gray);
-            border-radius: 5px;
-            &:after,
-            &:before {
-                content: "";
-                position: absolute;
-                top: -10px;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: get-color(gray);
-                border-radius: 5px;
-                transition: all .2s;
-            }
-            &:before {
-                top: 10px;
-            }
-        }
-        /* Close */
-        &:after,
-        &:before {
-            display: none;
-            content: "";
-            position: absolute;
-            top: -5px;
-            left: 14px;
-            width: 5px;
-            height: 38px;
-            background-color: get-color(gray);
-            border-radius: 5px;
-            transform: rotate(45deg);
-            transition: all .2s;
-        }
-        &:before {
-            transform: rotate(-45deg);
-        }
-        &:active {
-            span {
-                &:after {
-                    top: -12px;
-                }
-                &:before {
-                    top: 12px;
-                }
-            }
-        }
-    }
+	background-color: get-color(white);
+	position: fixed;
+	text-align: center;
+	margin: 30px 0;
+	@include mq($from: desktop) {}
+	&_header {
+		display: inherit;
+		margin: 0;
+		padding: 30px 0 10px;
+		text-align: center;
+		color: get-color(white);
+		h2 {
+			font-size: ms(4);
+			font-weight: 600;
+		}
+		p {
+			font-size: ms(2);
+			font-weight: 400;
+		}
+	 }
+	 &_content {
+		  @include mq($from: tablet) {
+			padding-left: (163px +15);
+		  }
+		  @include mq($until: desktop) {
+				@include center(v);
+				width: 100%;
+		  }
+	 }
+	 &_list {
+		border: none;
+		background: none;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		display: block;
+		margin: 0;
+		z-index: 40;
+		transition: all .2s;
+		@include mq($from: desktop) {
+				display: none;
+		  }
+		  span {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				margin-top: -2px;
+				background-color: get-color(gray);
+				border-radius: 5px;
+				&:after,
+				&:before {
+					 content: "";
+					 position: absolute;
+					 top: -10px;
+					 left: 0;
+					 width: 100%;
+					 height: 100%;
+					 background-color: get-color(gray);
+					 border-radius: 5px;
+					 transition: all .2s;
+				}
+				&:before {
+					 top: 10px;
+				}
+		  }
+		  /* Close */
+		  &:after,
+		  &:before {
+				display: none;
+				content: "";
+				position: absolute;
+				top: -5px;
+				left: 14px;
+				width: 5px;
+				height: 38px;
+				background-color: get-color(gray);
+				border-radius: 5px;
+				transform: rotate(45deg);
+				transition: all .2s;
+		  }
+		  &:before {
+				transform: rotate(-45deg);
+		  }
+		  &:active {
+				span {
+					 &:after {
+						  top: -12px;
+					 }
+					 &:before {
+						  top: 12px;
+					 }
+				}
+		  }
+	 }
+}
+
+.navigation-top{
+	display: none;
+
+	@include mq($from: desktop ) {
+	  display: block;
+	}
+
+	&_menu{
+		position: absolute;
+		top: 0;
+		padding: 35px 40px;
+		@include expand(get-color(white));
+	}
+	&_item{
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 20px;
+		letter-spacing: 3px;
+		a{
+			color: get-color(gray);
+		}
+		
+		&:first-child{
+			margin-left: 0;
+		}
+		&--has-line{
+			&:after{
+				background-color: get-color(gray);
+				content: "";
+				display: block;
+				position: absolute;
+				// width: 100%;
+				left: 0;
+				right: 0;
+				height: 1px;
+				top: 100%;
+				@include mq($from: desktop ) {
+					width: 1px;
+					height: 106px;
+					top: 50%;
+					left: 100%;
+					right: initial;
+					margin-top: -53px;
+					margin-left: 15px;
+				}
+			}
+		}
+	 }
+	 &_link{
+		  color: get-color(gray);
+		  display: block;
+		  font-size: 14px;
+		  font-weight: 600;
+		  @include mq($from: desktop ) {
+				padding: 12px 30px;
+		  }
+		  &.active{
+				background-color: get-color(white);
+		  }
+	 }
 }

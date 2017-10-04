@@ -1,17 +1,35 @@
-.side-header {
-    background-color: #250345;
-}
-
-.site-header_top {
-    position: inherit;
-    padding: 24px 0 12px;
-    text-align: center;
-    @include mq($from: tablet) {}
-    @include mq($from: desktop) {
-        height: 123px;
+/*
+    HEADER
+*/
+.site-header{
+    background-color: get-color(white);
+    position: relative;
+    height: 65px;
+    @include clearfix();
+    @include mq($from: tablet) {
     }
-}
-
-.side-header_menu {
-    text-decoration-line: none;
+    @include mq($from: desktop) {
+        // height: 123px;
+        height: auto;
+        overflow: hidden;
+    }
+    &_top{
+        background-color: #E3E4E8;
+    }
+    .site-logo{
+        display: block;
+        position: absolute;
+        z-index: 40;
+        width: 140px;
+        margin-top: 20px;
+        
+        @include mq($from: desktop ) {
+            width: 163px;
+            // margin-top: 20px;
+        }
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
 }

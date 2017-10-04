@@ -142,11 +142,11 @@
 }
 
 .img-reponsive{
-	@include img-reponsive();
+	@include img-responsive();
 }
 
 .img-adaptative{
-	@include img-reponsive();
+	@include img-responsive();
 }
 
 .img-center{
@@ -187,11 +187,111 @@
 			}
 		}
 	}
+	&-block--center{
+		.table-block_content{
+			vertical-align: middle;
+		}
+	}
+	&-block--bottom{
+		.table-block_content{
+			vertical-align: bottom;
+		}
+	}
 }
  
+.height-full{
+	height: 100%;
+}
+
+.video-wrapped{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.video-wrapped iframe{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.elem-center{
+	@include center-block();
+}
+
+.ir{
+	background-color: transparent;
+	border: 0;
+	overfloat: hidden;
+	*text-indent: -9999px;
+}
+
+.ir:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
+
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
 
 
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
 
+.clearfix {
+	*zoom: 1;
+}
+
+.dots {
+	margin-left: 0;
+	@include mq($until: tablet) {
+		margin-left: 20px;
+	}
+	display: block;
+	&--light {
+		li {
+			padding-left: 20px;
+			position: relative;
+			@include mq($until: tablet) {
+				margin-left: 20px;
+			}
+			&:before {
+				content: "";
+				background-color: rgba(get-color(gray), 0.2);
+				position: absolute;
+				margin: 7px 0;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	li {
+		padding-left: 20px;
+		position: relative;
+		&:before {
+			content: "";
+			background-color: red;
+			position: absolute;
+			margin: 7px 0;
+			left: 0;
+			top: 0;
+		}
+	}
+}
 
 
 
