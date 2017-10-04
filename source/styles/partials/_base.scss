@@ -5,11 +5,9 @@
 }
 
 body{
-	color: colorText(secondary);
-	background-image: url("images/bg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	color: get-color(black);
+	background-color: get-color(white-body);
+	padding: 30px;
 	font-family: $lato;
 	font-size: 16px;
 	line-height: 1.2;
@@ -30,7 +28,7 @@ body{
 }
 
 a{
-	color: #457EC0;
+	color: get-color(black);
 }
 b,
 strong {

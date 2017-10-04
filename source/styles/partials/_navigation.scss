@@ -1,5 +1,4 @@
 .navigation {
-	background-color: get-color(white);
 	position: fixed;
 	text-align: center;
 	margin: 30px 0;
@@ -9,7 +8,7 @@
 		margin: 0;
 		padding: 30px 0 10px;
 		text-align: center;
-		color: get-color(white);
+		color: get-color(black);
 		h2 {
 			font-size: ms(4);
 			font-weight: 600;
@@ -51,7 +50,7 @@
 				width: 100%;
 				height: 4px;
 				margin-top: -2px;
-				background-color: get-color(gray);
+				background-color: get-color(gray-cont);
 				border-radius: 5px;
 				&:after,
 				&:before {
@@ -61,7 +60,7 @@
 					 left: 0;
 					 width: 100%;
 					 height: 100%;
-					 background-color: get-color(gray);
+					 background-color: get-color(gray-cont);
 					 border-radius: 5px;
 					 transition: all .2s;
 				}
@@ -79,7 +78,7 @@
 				left: 14px;
 				width: 5px;
 				height: 38px;
-				background-color: get-color(gray);
+				background-color: get-color(gray-cont);
 				border-radius: 5px;
 				transform: rotate(45deg);
 				transition: all .2s;
@@ -108,18 +107,19 @@
 	}
 
 	&_menu{
-		position: absolute;
-		top: 0;
+		position: relative;
 		padding: 35px 40px;
-		@include expand(get-color(white));
+		margin-bottom: 20px;
+		background-color: get-color(gray-menu);
+		text-align: center;
 	}
 	&_item{
 		display: inline-block;
 		margin-bottom: 0;
-		margin-left: 20px;
+		padding: 0 32px;
 		letter-spacing: 3px;
 		a{
-			color: get-color(gray);
+			color: get-color(black);
 		}
 		
 		&:first-child{
@@ -127,7 +127,7 @@
 		}
 		&--has-line{
 			&:after{
-				background-color: get-color(gray);
+				background-color: get-color(gray-cont);
 				content: "";
 				display: block;
 				position: absolute;
@@ -138,9 +138,9 @@
 				top: 100%;
 				@include mq($from: desktop ) {
 					width: 1px;
-					height: 106px;
-					top: 50%;
-					left: 100%;
+					height: 56px;
+					top: 76%;
+					left: 17%;
 					right: initial;
 					margin-top: -53px;
 					margin-left: 15px;
@@ -149,7 +149,7 @@
 		}
 	 }
 	 &_link{
-		  color: get-color(gray);
+		  color: get-color(gray-cont);
 		  display: block;
 		  font-size: 14px;
 		  font-weight: 600;

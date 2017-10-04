@@ -15,17 +15,17 @@
 }
 
 .light_typography{
-	color: get-color(white);
+	color: get-color(white-footer);
 
 	a{
-		color: get-color(white);
+		color: get-color(white-footer);
 	}
 	a:hover{
-		color: get-color(white);
+		color: get-color(white-footer);
 	}
 
 	h1, h2, h3, h4, h5, h6{
-		color: get-color(white);
+		color: get-color(white-footer);
 	}
 }
 

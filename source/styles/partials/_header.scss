@@ -2,7 +2,6 @@
     HEADER
 */
 .site-header{
-    background-color: get-color(white);
     position: relative;
     height: 65px;
     @include clearfix();
