@@ -6,39 +6,15 @@
 
 body{
 	color: get-color(black);
-	background-color: get-color(white-body);
-	padding: 30px;
+	background-color: get-color(white);
 	font-family: $lato;
 	font-size: 16px;
 	line-height: 1.2;
 	font-weight: 400;
-	overflow: hidden;
-
-	&.admin-bar{
-		.site-header{
-			&_fixed{
-				margin-top: 32px;
-			}
-		}
-		.mfp-wrap,
-		.site-nav{
-			margin-top: 32px;
-		}
-	}
 }
 
 a{
 	color: get-color(black);
-}
-b,
-strong {
-  font-weight: bold;
-}
-figure{
-	margin: 0;
-}
-blockquote{
-	margin: 0;
 }
 hr{
 	background-color: #D8D8D8;

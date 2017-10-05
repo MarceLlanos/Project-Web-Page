@@ -1,0 +1,60 @@
+extends partials/docwrapper
+block langPage
+	meta(name= "language", content = "es")
+block titlePage
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		include partials/header
+		include partials/menu
+
+		section
+			.container.navigation-container
+				h2.text-center.light.underline Lista de Videos
+				form.form-inline.upload_box.text-sm-center()
+					label.sr-only(for="informacion") Contenido adicional
+					input.form-control.upload_field(type="text" id="informacion" placeholder="Ingresa contenido adicional sobre el video")
+					a.btn.btn-danger(href="") Buscar
+				div.bs-example(data-example-id="tabla")
+					table.table.table-hover
+						thead
+							tr
+								th #
+								th Link video
+								th Video imagen
+								th Descripcción del video
+								th Editar
+								th Borrar
+						tbody
+							tr
+								th(scope='row') 1
+								th angular.mp4
+								th angular.mp4
+								th angular.mp4
+								th a.btn.btn-default(href="") Editar
+								th a.btn.btn-default(href="") Eliminar
+							tr
+								th(scope='row') 2
+								th angular.mp4
+								th angular.mp4
+								th angular.mp4
+								th button.btn.btn-default Editar
+								th button.btn.btn-default Eliminar
+							tr
+								th(scope='row') 3
+								th angular.mp4
+								th angular.mp4
+								th angular.mp4
+								th button.btn.btn-default Editar
+								th button.btn.btn-default Eliminar
+							tr
+								th(scope='row') 4
+								th angular.mp4
+								th angular.mp4
+								th angular.mp4
+								th button.btn.btn-default Editar
+								th button.btn.btn-default Eliminar
+		include partials/footer
+		include partials/scripts

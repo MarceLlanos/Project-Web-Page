@@ -1,0 +1,47 @@
+extends partials/docwrapper
+block langPage
+	meta(name= "language", content = "es")
+block titlePage
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		include partials/header
+		include partials/menu
+
+		section.navigation-container
+			h2.text-center.light.underline Editor
+			.row
+				.col-xs-12.col-sm-5.col-md-5
+					div.bs-example
+						form.form-inline.upload_box()
+							div.form-group
+								p.title-s3.regular.text-sm-center.underline Cargar video
+								label.sr-only(for ="direccion") Dirección video
+								input.form-control.upload_field(type="text"  id = "direccion" placeholder= "Ingresa la url del video")
+								a.btn.btn-default(href="#") Subir
+								video(for="direccion")
+				.col-xs-12.col-sm-7.col-md-7
+					div.bs-example
+						form.upload_box()
+							div.form-group
+								p.title-s3.regular.text-sm-center.underline Infomación adicional sobre el video
+
+								label.sr-only(for="informacion") Contenido adicional
+								input.form-control.upload_field(type="text" id="informacion" placeholder="Ingresa contenido adicional sobre el video")
+								
+								label.sr-only(for="link") Links
+								input.form-control.upload_field(type="text" id="link" placeholder="Ingresa enlaces adicionales")
+								
+								label.sr-only(for="maps") Ubicación de un lugar
+								input.form-control.upload_field(type="text" id="maps" placeholder="Ingresa un dirección")
+			.text-sm-center
+				button.btn.btn-danger.btn-lg( type="button") Guardar
+		include partials/footer
+		include partials/scripts
+
+								
+
+
+

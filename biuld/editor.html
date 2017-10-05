@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <!--<![endif]\-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="es">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Proyecto Televisión Digital
+    </title>
+    <link href="font" rel="text/html">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav navigation_header">
+          <h2 class="text-black">PROYECTO TELEVISIÓN DIGITAL UMSS</h2>
+          <p class="text-black">Aplicación para Televisión Digital que Permita Aumentar Información Adicional</p>
+        </div>
+      </div>
+    </header>
+    <div class="side-header_menu">
+      <div class="container">
+        <div class="nav">
+          <ul class="navigation-top_menu">
+            <li class="navigation-top_item"><a href="index.html">INICIO</a></li>
+            <li class="navigation-top_item"><a href="editor.html">EDITOR</a></li>
+            <li class="navigation-top_item"><a href="video-list.html">LISTA VIDEOS</a></li>
+            <li class="navigation-top_item"><a href="tutorial.html">TUTORIAL</a></li>
+            <li class="navigation-top_item"><a href="acerca-de.html">ACERCA DE</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="navigation-container">
+      <h2 class="text-center light underline">Editor</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-5">
+          <div class="bs-example">
+            <form class="form-inline upload_box">
+              <div class="form-group">
+                <p class="title-s3 regular text-sm-center underline">Cargar video</p>
+                <label class="sr-only" for="direccion">Dirección video</label>
+                <input class="form-control upload_field" type="text" id="direccion" placeholder="Ingresa la url del video"><a class="btn btn-default" href="#">Subir</a>
+                <video for="direccion"></video>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
+          <div class="bs-example">
+            <form class="upload_box">
+              <div class="form-group">
+                <p class="title-s3 regular text-sm-center underline">Infomación adicional sobre el video</p>
+                <label class="sr-only" for="informacion">Contenido adicional</label>
+                <input class="form-control upload_field" type="text" id="informacion" placeholder="Ingresa contenido adicional sobre el video">
+                <label class="sr-only" for="link">Links</label>
+                <input class="form-control upload_field" type="text" id="link" placeholder="Ingresa enlaces adicionales">
+                <label class="sr-only" for="maps">Ubicación de un lugar</label>
+                <input class="form-control upload_field" type="text" id="maps" placeholder="Ingresa un dirección">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="text-sm-center">
+        <button class="btn btn-danger btn-lg" type="button">Guardar</button>
+      </div>
+    </section>
+    <footer>
+      <div class="container site-footer text-sm-center">
+        <p class="light italic">@Copyright Proyecto de grado para televisión digital</p>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+extends partials/docwrapper
+block langPage
+	meta(name= "language", content = "es")
+block titlePage
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		include partials/header
+		include partials/menu
+
+		section
+			.container
+				div.navigation-container
+					article
+						h2.title.underline.text-center Inicio
+						row
+							.col-xs-12.col-sm-6.col-md-6
+								p.text-article Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							.col-xs-12.col-sm-6.col-md-6
+								img
+
+
+
+
+
+
+
+
+
+
+		include partials/footer
+		include partials/scripts

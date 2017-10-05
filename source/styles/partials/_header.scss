@@ -3,7 +3,7 @@
 */
 .site-header{
     position: relative;
-    height: 65px;
+    height: 60px;
     @include clearfix();
     @include mq($from: tablet) {
     }
@@ -11,9 +11,6 @@
         // height: 123px;
         height: auto;
         overflow: hidden;
-    }
-    &_top{
-        background-color: #E3E4E8;
     }
     .site-logo{
         display: block;

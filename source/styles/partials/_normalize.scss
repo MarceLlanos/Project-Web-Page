@@ -1,3 +1,4 @@
+
 html{
 	-ms-text--size-adjust: 100%;
 	-webkit-text-size-adjust: 100;
@@ -32,6 +33,14 @@ nav,
 section,
 summary {
   display: block;
+}
+
+main{
+  background-color: get-color(white);
+}
+.site-main{
+  background-color: get-color(white-body);
+
 }
 a {
   background-color: transparent;
